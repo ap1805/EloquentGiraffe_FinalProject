@@ -42,12 +42,19 @@
     <Compile Include="file_handlerPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="picturePackage\picture.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="picturePackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="decryptionPackage\" />
     <Folder Include="mainPackage\" />
     <Folder Include="file_handlerPackage\" />
     <Folder Include="Data\" />
+    <Folder Include="picturePackage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\EncryptedGroupHints Fall 2024 Section 001.json" />
