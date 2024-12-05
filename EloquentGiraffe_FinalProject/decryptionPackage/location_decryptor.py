@@ -26,6 +26,6 @@ class Location_Decryptor:
         @return: Decrypted location string
         """
         
-        decrypted_location = " ".join(self.dictionary[int(hint) - 1] for hint in hints)
+        decrypted_location = " ".join(self.dictionary[int(hint)] for hint in hints)
         return decrypted_location
 
