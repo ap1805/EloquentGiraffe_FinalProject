@@ -21,14 +21,7 @@ class movie_decryptor:
         @param Parameter str encrypted_message: The encrypted message to decrypt.
         @return str or None: The decrypted message or None on failure.
         """
-        try:
-            if not encrypted_message:
-                raise ValueError("The encrypted message is empty or None.")
-            
-            decrypted = self.cipher_suite.decrypt(encrypted_message.encode()).decode('utf-8')
-            return decrypted
-        except Exception as e:
-            print(f"Error decrypting message: {e}")
-            return None
+        decrypted = self.cipher_suite.decrypt(encrypted_message.encode()).decode('utf-8')
+        return decrypted
 
 
