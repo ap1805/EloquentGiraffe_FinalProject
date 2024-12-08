@@ -1,8 +1,23 @@
-# main.py
+##############################################################################################################################################################################
+# Name: Aryan Patel, Will Padgett, Heitor Previatti                                                                                                                          #
+# email: patel7aj@mail.uc.edu, padgetwg@mail.uc.edu, previahc@mail.uc.edu                                                                                                    #
+# Assignment Number: Final Project                                                                                                                                           #
+# Due Date: 12/10/2024                                                                                                                                                       #
+# Course #/Section: IS4010/001                                                                                                                                               #
+# Semester/Year: Fall/2024                                                                                                                                                   #
+# Brief Description of the assignment: Collaborate with team members to develop a python application to go on a scavenger hunt.                                              #  
+# Brief Description of what this module does:This module calls all the functions in the other modules                                                                        #
+# Citations: https://stackoverflow.com/questions/48729915/how-to-read-images-into-a-script-without-using-using-imageio-or-scikit-image                                       #
+# https://www.geeksforgeeks.org/how-to-encrypt-and-decrypt-strings-in-python/                                                                                                 #
+# Anything else that's relevant:                                                                                                                                             #
+##############################################################################################################################################################################
+
+
 
 from file_handlerPackage.file_handler import FileHandler
 from decryptionPackage.movie_decryptor import MovieDecryptor
 from decryptionPackage.location_decryptor import Location_Decryptor
+from picturePackage.picture import Picture
 import os
 
 if __name__ == "__main__":
@@ -19,8 +34,7 @@ if __name__ == "__main__":
     messages_data = FileHandler.load_json(messages_file)
     dictionary = list(FileHandler.load_plain_text(dictionary_file))
     
-    print(f"Loaded dictionary sample: {dictionary[:10]}")
-    print(f"Total lines in dictionary: {len(dictionary)}")
+   
 
     # Hardcoded group name and decryption key
     group_name = "EloquentGiraffe"
@@ -42,12 +56,11 @@ if __name__ == "__main__":
     results = []
 
     for encrypted_message in group_messages:
-        print(f"Attempting to decrypt message: {encrypted_message}")
+       
         decrypted_message = movie_decryptor.decrypt_message(encrypted_message)
+        print(f"Decrypted message: {decrypted_message}")
+            
+    chickfilaPicture = Picture('./Data/Chickfila.jpg')
 
-        if decrypted_message:
-            print(f"Decrypted message: {decrypted_message}")
-            results.append(decrypted_message)
-        
-
+    chickfilaPicture.show_image()
    
